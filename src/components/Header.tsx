@@ -5,14 +5,7 @@ import { Button } from "./ui/button";
 import { ShoppingCart, Sun, Moon } from "lucide-react";
 import ProfileButton from "./ui/ProfileButton";
 import { useTheme } from "next-themes";
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 
 export default function Header() {
@@ -33,7 +26,7 @@ export default function Header() {
     },
   ];
   return (
-    <header className="sm:flex sm:justify-between py-3 px-4 border-b">
+    <header className="sm:flex sm:justify-between  border-b">
       <Container>
         <div className="relative px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between w-full">
           <div className="flex items-center">
@@ -79,6 +72,7 @@ export default function Header() {
               <ShoppingCart className="h-6 w-6" />
               <span className="sr-only">Shopping Cart</span>
             </Button>
+            {/* theme switcher */}
             <Button
               variant={"ghost"}
               size={"icon"}
