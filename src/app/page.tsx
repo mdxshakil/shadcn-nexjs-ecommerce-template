@@ -1,5 +1,7 @@
+import ProductList from "@/components/ProductList";
 import { Button } from "@/components/ui/button";
 import Container from "@/components/ui/container";
+import { products } from "@/constants";
 import { ShoppingBag } from "lucide-react";
 
 export default function Home() {
@@ -17,10 +19,14 @@ export default function Home() {
                 <Button size={"lg"} className="w-full py-6 text-xl">
                   <ShoppingBag className="mr-2" />
                   Shop Now
-                </Button> 
+                </Button>
               </div>
             </div>
           </div>
+        </div>
+        {/* product cards */}
+        <div className="flex flex-col gap-y-8 px-4 sm:px-6 lg:px-8">
+          <ProductList items={products} />
         </div>
       </div>
     </Container>
